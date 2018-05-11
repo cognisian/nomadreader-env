@@ -1,0 +1,215 @@
+# encoding: utf-8
+# vim: ft=ruby expandtab shiftwidth=2 tabstop=2
+
+#
+# General Settings
+#
+wp_box: vccw-team/xenial64
+
+#
+# Virtual Machine Settings
+#
+memory: 1024
+cpus: 1
+
+#
+# Network Settings
+#
+hostname: nomadreader.test
+ip: 192.168.33.10
+
+#
+# WordPress Settings
+#
+version: latest
+lang: en_US
+title: Nomad
+multisite: false
+rewrite_structure: /products/%postname%
+
+#
+# WordPress Path
+#
+wp_siteurl: ''  # Path to the WP_SITEURL like "wp"
+wp_home: ''     # Path to the WP_HOME like "wp"
+
+#
+# WordPress User
+#
+admin_user: admin
+admin_pass: admin
+admin_email: admin@nomadreader.test
+
+#
+# WordPress Database
+#
+db_prefix: wp_
+db_host: localhost
+db_name: wordpress
+db_user: wordpress
+db_pass: wordpress
+
+#
+# WordPress Default Plugins
+# Plugin's slug or url to the plugin's slug.
+#
+plugins:
+- logbook
+- debug-bar
+- debug-bar-console
+- query-monitor
+- wordpress-importer
+- external-media-without-import
+- better-search-replace
+- woocommerce
+- gridlist-view-for-woocommerce
+- woocommerce-products-filter
+- yith-woocommerce-wishlist
+- /vagrant/amazon_books.zip
+
+#
+# WordPress Default Theme
+# Theme's slug or url to the theme's .zip.
+#
+theme: '/vagrant/storefront.2.2.6.zip'
+
+#
+# WordPress Options
+#
+options:
+  blogname:	Nomad
+  blogdescription:	Read about where you travel
+  users_can_register:	0
+  start_of_week:	1
+  date_format:	M jS Y
+  time_format:	g:i a
+  links_updated_date_format:	F j, Y g:i a
+  default_category:	1
+  default_comment_status:	open
+  default_ping_status:	open
+  default_pingback_flag:	1
+  posts_per_page:	10
+  links_updated_date_format:	F j, Y g:i a
+  permalink_structure:	/products/%postname%
+  default_category: 1
+  default_comment_status: open
+  default_ping_status:  open
+  default_pingback_flag:  0
+  posts_per_page: 40
+  blog_charset: UTF-8
+  comment_max_links:  2
+  html_type:  text/html
+  use_trackback:  0
+  show_on_front:	page
+  woocommerce_default_country:	CA:ON
+  woocommerce_allowed_countries:	all
+  woocommerce_demo_store:	no
+  yith_wcwl_enabled:	yes
+  yith_wcwl_wishlist_title:	My wishlist on Nomad
+  yith_wcwl_socials_title:	My wishlist on Nomad
+  yith_wcas_search_input_label:	Search for products
+  yith_wcas_search_submit_label:	Search
+
+#
+# WordPress Multisite Options
+#
+multisite_options: {}
+
+#
+# The values of wp-config.php
+#
+force_ssl_admin: false
+wp_debug: true
+savequeries: false
+
+gitignore: https://raw.githubusercontent.com/github/gitignore/master/WordPress.gitignore
+
+#
+# Addtional PHP code in the wp-config.php
+#
+extra_wp_config: |
+  // Addtional PHP code in the wp-config.php
+  // These lines are inserted by VCCW.
+  // You can place addtional PHP code here!
+
+#
+# Theme unit testing
+#
+theme_unit_test: false
+theme_unit_test_uri: https://raw.githubusercontent.com/WPTRT/theme-unit-test/master/themeunittestdata.wordpress.xml
+# theme_unit_test_uri: https://raw.githubusercontent.com/jawordpressorg/theme-test-data-ja/master/wordpress-theme-test-date-ja.xml
+
+#
+# DB will be reset when provision
+#
+reset_db_on_provision: true
+
+#
+# RubyGems
+# Wordmove will be forcibly installed.
+#
+ruby_gems:
+  - bundler
+  - wordmove
+
+mailcatcher: false
+
+wp_i18n_tools: true
+
+#
+# NPM modules
+#
+npms: []
+
+#
+# composer
+#
+composers:
+  - phpunit/phpunit:5.6
+  - squizlabs/php_codesniffer:~2.0
+  - wp-coding-standards/wpcs:*
+  # - phpmd/phpmd:*
+  # - sebastian/phpcpd:*
+  # - phploc/phploc:*
+  # - phing/phing:*
+
+#
+# wp-cli package commands
+#
+wp_cli_packages:
+  - https://github.com/vccw-team/wp-cli-scaffold-movefile/archive/master.zip
+
+#
+# Linked Clone for Vagrant v1.8
+#
+linked_clone: false
+
+#
+# Advanced Settings
+#
+
+#
+# PHP ini values
+#
+php_ini:
+  date.timezone: UTC
+  default_charset: UTF-8
+  mbstring.language: neutral
+  mbstring.internal_encoding: UTF-8
+  post_max_size: 1024M # Same with VVV
+  short_open_tag: Off
+  session.save_path: /tmp
+  upload_max_filesize: 1024M # Same with VVV
+  xdebug.remote_enable: true
+  xdebug.remote_host: 10.0.0.17
+  xdebug.remote_port: 9000
+  xdebug.profiler_enable: true
+  xdebug.idekey: VCCWDEBUG
+  xdebug.remote_connect_back: true
+  xdebug.remote_autostart: true
+  xdebug.var_display_max_depth: 5
+  xdebug.var_display_max_children: 256
+  xdebug.var_display_max_data: 1024
+
+synced_folder: wordpress
+document_root: /var/www/html
