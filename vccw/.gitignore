@@ -9,4 +9,7 @@
 npm-debug.log
 package.box
 playbook.retry
+<<<<<<< HEAD
 wordpress/
+=======
+>>>>>>> 496033b015b3d2ce7f2e9dfcd9b4dd170fde6f6c
