@@ -196,10 +196,12 @@ php_ini:
   default_charset: UTF-8
   mbstring.language: neutral
   mbstring.internal_encoding: UTF-8
-  post_max_size: 1024M # Same with VVV
+  post_max_size: 32M # Same with VVV
   short_open_tag: Off
   session.save_path: /tmp
-  upload_max_filesize: 1024M # Same with VVV
+  upload_max_filesize: 32M # Same with VVV
+  max_file_uploads: 128
+  max_execution_time: 300
   xdebug.remote_enable: true
   xdebug.remote_host: 10.0.0.17
   xdebug.remote_port: 9000
