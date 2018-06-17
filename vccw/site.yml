@@ -65,7 +65,7 @@ plugins:
 - gridlist-view-for-woocommerce
 - woocommerce-products-filter
 - yith-woocommerce-wishlist
-- /vagrant/nomadreader-books.zip
+- /vagrant/nomadreader-import.zip
 
 #
 # WordPress Default Theme
