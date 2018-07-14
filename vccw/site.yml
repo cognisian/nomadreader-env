@@ -54,7 +54,7 @@ db_pass: wordpress
 # Plugin's slug or url to the plugin's slug.
 #
 plugins:
-- logbook
+# - logbook
 - debug-bar
 - debug-bar-console
 - query-monitor
@@ -65,7 +65,7 @@ plugins:
 - gridlist-view-for-woocommerce
 - woocommerce-products-filter
 - yith-woocommerce-wishlist
-- /vagrant/nomadreader-import.zip
+- /vagrant/nomadreader-import-master.zip
 
 #
 # WordPress Default Theme
