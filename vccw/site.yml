@@ -65,6 +65,7 @@ plugins:
 - gridlist-view-for-woocommerce
 - woocommerce-products-filter
 - yith-woocommerce-wishlist
+- /vagrant/wpfbbotkit-master.zip
 - /vagrant/nomadreader-import-master.zip
 
 #
