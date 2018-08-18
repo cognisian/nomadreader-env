@@ -209,7 +209,7 @@ php_ini:
   xdebug.remote_host: 10.0.0.17
   xdebug.remote_port: 9000
   xdebug.profiler_enable: true
-  xdebug.idekey: VCCWDEBUG
+  xdebug.idekey: xdebug.atom
   xdebug.remote_connect_back: true
   xdebug.remote_autostart: true
   xdebug.var_display_max_depth: 5
