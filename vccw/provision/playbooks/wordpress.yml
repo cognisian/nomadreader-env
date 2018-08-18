@@ -129,9 +129,9 @@
   # Install Theme
   - name: Run `wp theme install`
     command: |
-      wp theme install {{ vccw.theme }}
+      wp theme install {{ item }}
       --path={{ path }} --activate --force
-    when: vccw.theme != ''
+    with_items: "{{ vccw.theme | default([]) }}"
 
   # Import Theme Unit Test Data
   - name: Install `wordpress-importer`
